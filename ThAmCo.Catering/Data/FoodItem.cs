@@ -8,6 +8,15 @@ namespace ThAmCo.Catering
 {
     public class FoodItem
     {
+        public FoodItem()
+        { 
+        }
+        
+        public FoodItem(string description) : this()
+        {
+            Description = description;
+        }
+
         public int FoodItemID { get; set; }
 
         [Required]

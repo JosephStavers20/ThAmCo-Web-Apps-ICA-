@@ -12,14 +12,19 @@ namespace ThAmCo.Catering
         public DbSet<FoodBooking> FoodBookings { get; set; }
         public DbSet<FoodItem> FoodItems { get; set; }
         public DbSet<Menu> Menus { get; set; }
-        public DbSet<MenuFoodItem> MenuFoodItems { get; set; }
+        public DbSet<MenuFoodItem> MenuFoodItems {get; set;}
 
-        public CateringContext()
+        protected override void OnConfiguring(DbContextOptionsBuilder options) => options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=Catering;");
+
+        protected override void OnModelCreating(ModelBuilder builder)
         {
+            base.OnModelCreating(builder);
+
 
         }
-                
     }
+
+    
 
     
 }

@@ -8,6 +8,15 @@ namespace ThAmCo.Catering
 {
     public class Menu
     {
+        public Menu()
+        {
+        }
+
+        public Menu(string menuName) : this()
+        {
+            MenuName = menuName;
+        }
+        
         public int MenuID { get; set; }
 
         [Required]
