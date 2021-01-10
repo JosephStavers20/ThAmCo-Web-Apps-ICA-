@@ -8,19 +8,23 @@ namespace ThAmCo.Catering
 {
     public class Menu
     {
-        public Menu()
-        {
-        }
+        //public Menu()
+        //{
+        //}
 
-        public Menu(string menuName) : this()
-        {
-            MenuName = menuName;
-        }
+        //public Menu(string menuName) : this()
+        //{
+        //    MenuName = menuName;
+        //}
         
-        public int MenuID { get; set; }
+        public int MenuId { get; set; }
 
         [Required]
         public string MenuName {get; set;}
+
+        public ICollection<MenuFoodItem> MenuFoods { get; set; }
+
+        public ICollection<FoodBooking> FoodBookings { get; set; }
 
     }
 }
