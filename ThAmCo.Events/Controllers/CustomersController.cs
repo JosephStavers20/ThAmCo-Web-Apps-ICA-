@@ -21,10 +21,7 @@ namespace ThAmCo.Events.Controllers
         // GET: Customers
         public async Task<IActionResult> Index()
         {
-            var eventsDbContext = _context.Customers
-                .Include(g => g.GuestBookings);
-
-            //return View(await _context.Customers.ToListAsync());
+            return View(await _context.Customers.ToListAsync());
         }
 
         // GET: Customers/Details/5

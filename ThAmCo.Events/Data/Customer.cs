@@ -21,6 +21,9 @@ namespace ThAmCo.Events.Data
         public List<GuestBooking> Bookings { get; set; }
 
         [System.ComponentModel.DataAnnotations.Schema.NotMapped]
-        public string CustomerName { get => FirstName + " " + Surname ; }
+        public string CustomerName { get => FirstName + " " + Surname; }
+
+        [System.ComponentModel.DataAnnotations.Schema.NotMapped]
+        public int BookingsCount { get => Bookings.Count; }
     }
 }
