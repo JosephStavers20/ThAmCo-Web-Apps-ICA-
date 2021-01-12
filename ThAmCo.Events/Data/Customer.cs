@@ -24,6 +24,8 @@ namespace ThAmCo.Events.Data
         public string CustomerName { get => FirstName + " " + Surname; }
 
         [System.ComponentModel.DataAnnotations.Schema.NotMapped]
+
+        //To instantiate the proper number of bookings in details section for Customers
         public int BookingsCount { get => Bookings.Count; }
     }
 }
