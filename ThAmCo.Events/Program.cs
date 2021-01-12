@@ -23,8 +23,10 @@ namespace ThAmCo.Events
                 if (env.IsDevelopment())
                 {
                     var context = services.GetRequiredService<EventsDbContext>();
-                    context.Database.EnsureDeleted();
-                    context.Database.Migrate();
+
+                    //This allows it to update the database
+                    //context.Database.EnsureDeleted();
+                    //context.Database.Migrate();
                 }
             }
 

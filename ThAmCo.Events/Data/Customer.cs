@@ -19,5 +19,8 @@ namespace ThAmCo.Events.Data
         public string Email { get; set; }
 
         public List<GuestBooking> Bookings { get; set; }
+
+        [System.ComponentModel.DataAnnotations.Schema.NotMapped]
+        public string CustomerName { get => FirstName + " " + Surname ; }
     }
 }

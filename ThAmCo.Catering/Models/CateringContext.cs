@@ -36,7 +36,7 @@ namespace ThAmCo.Catering.Models
                 .HasOne(f => f.FoodItem)
                 .WithMany(m => m.MenuFoodItems)
                 .HasForeignKey(f => f.FoodItemId);
-                                   
+                                                                                  
 
             //Seed Data
             builder.Entity<FoodItem>().HasData(
